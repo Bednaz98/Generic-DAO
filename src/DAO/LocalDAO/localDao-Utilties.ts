@@ -1,6 +1,6 @@
 import fs from "fs-extra"
 import { LocalDAO } from "./index";
-import { genericDataObject } from "../types";
+import { genericDataObject } from "../../types";
 
 export function ensureDir(path: string) {
     return fs.ensureDirSync(path)

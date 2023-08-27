@@ -1,6 +1,7 @@
-import { LocalDAO } from "./DAO"
+import { LocalDAO } from "./DAO/LocalDAO"
 import { MemoryDAO } from "./DAO/MemoryDAO";
-import { DAO } from "./DAO/types"
+import { DAO } from "./types"
+
 
 
 
@@ -23,3 +24,6 @@ export const getDAO = (filePath: string, mode: DAOMode): DAO => {
     }
     return dao
 }
+
+
+export * from './types'
