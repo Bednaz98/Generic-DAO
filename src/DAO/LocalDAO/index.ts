@@ -1,6 +1,6 @@
 import fs, { ensureDir } from "fs-extra"
 import { MemoryDAO } from "../MemoryDAO";
-import { DAO, genericDataObject } from "../../types";
+import { DAO, genericDataObject } from "../types";
 import { deleteFile, getAllFileNames, getAllFiles, getFileData, writeLocalFile } from "./localDao-Utilties";
 
 export class LocalDAO implements DAO {

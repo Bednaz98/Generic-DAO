@@ -1,5 +1,4 @@
-import { DAO, genericDataObject } from "../../types";
-
+import { DAO, genericDataObject } from "../types";
 
 export class MemoryDAO implements DAO {
 

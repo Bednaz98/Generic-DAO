@@ -1,5 +1,6 @@
 import { DAOMode, getDAO } from '../src'
-import { LocalDAO } from '../src/DAO';
+import { LocalDAO } from '../src/DAO/LocalDAO';
+
 
 describe('testing Local DAO', () => {
     const DAO = getDAO('./testingDAO', DAOMode.Local) as LocalDAO;

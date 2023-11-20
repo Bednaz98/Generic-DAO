@@ -4,7 +4,6 @@ export interface genericDataObject {
     [key: string]: string | number | boolean;
 }
 
-
 export interface DAO {
     saveData: <T = any>(tableName: string, id: string, data: genericDataObject | Awaited<T>) => Promise<boolean>
     getDataByID: <T = genericDataObject>(tableName: string, id: string) => Promise<T | null | Awaited<T>>

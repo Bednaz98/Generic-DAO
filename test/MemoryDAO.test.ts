@@ -1,5 +1,6 @@
 import { DAOMode, getDAO } from '../src'
-import { LocalDAO, MemoryDAO } from '../src/DAO';
+import { MemoryDAO } from '../src/DAO/MemoryDAO';
+
 
 describe('testing Local DAO', () => {
     const DAO = getDAO('./testingDAO', DAOMode.memory) as MemoryDAO;

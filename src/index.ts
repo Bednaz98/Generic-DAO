@@ -1,12 +1,8 @@
 import { LocalDAO } from "./DAO/LocalDAO"
 import { MemoryDAO } from "./DAO/MemoryDAO";
-import { DAO } from "./types"
+import { DAO } from "./DAO/types"
 
-
-
-
-
-
+export * from './DAO/types';
 export enum DAOMode {
     memory,
     Local,
@@ -24,6 +20,3 @@ export const getDAO = (filePath: string, mode: DAOMode): DAO => {
     }
     return dao
 }
-
-
-export * from './types'
