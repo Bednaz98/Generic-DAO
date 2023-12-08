@@ -1,22 +1,18 @@
-import { LocalDAO } from "./DAO/LocalDAO"
-import { MemoryDAO } from "./DAO/MemoryDAO";
+
+import { MemoryDAO } from "./DAO";
 import { DAO } from "./DAO/types"
 
 export * from './DAO/types';
 export enum DAOMode {
     memory,
     Local,
-    GenericCache
+    Prisma,
 }
-
-export const getDAO = (filePath: string, mode: DAOMode): DAO => {
-    let dao: DAO;
-    switch (mode) {
-        case DAOMode.memory: {
-            dao = new MemoryDAO(filePath)
-            break;
-        }
-        default: { dao = new LocalDAO(filePath); break }
-    }
-    return dao
+export interface DAOConfig {
+    filePath?: string,
+    fileName?: string | undefined,
+    databaseURL?: string
+}
+export const getDAO = (config: DAOConfig): DAO => {
+    return new MemoryDAO(config.filePath, config.fileName, config.databaseURL)
 }
