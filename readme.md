@@ -1,8 +1,8 @@
 # Generic DAO
 
-This project creates a DAO (Database access object) that can be extended and use for multiple projects. The root design resolves around an object that holds data in memory. When needed, a push function can be called to commit the current data in memory to the database. Currently, this project on supports writing to a local file in a json format. In the future, this will be expected to include the option to use Prisma to write the data in memory to any datable supported by prisma.
+This project creates a DAO (Database access object) that can be extended and used for multiple projects. The root design resolves around an object that holds data in memory. When needed, a push function can be called to commit the current data in memory to the database. Currently, this project supports writing to a local file in a JSON format. In the future, this will be expected to include the option to use Prisma to write the data in memory to any datable supported by Prisma.
 
-The DAO interface is designed to connect SQL concepts to the function calls. The DAO tries to cache data in memory similar to a SQL table. In Memory the object created has a top level key that relates to the table that would be present in a SQL database. from there all rows are stored as key value pairs in one large nested object. The data structure looks as follows:
+The DAO interface is designed to connect SQL concepts to the function calls. The DAO tries to cache data in memory similar to a SQL table. In Memory, the object created has a top-level key that relates to the table that would be present in a SQL database. From there all rows are stored as key-value pairs in one large nested object. The data structure looks as follows:
 
 ```JavaScript
 {
